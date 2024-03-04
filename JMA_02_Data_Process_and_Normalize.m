@@ -377,7 +377,7 @@ for study_pop = 1:length(g)
                 DataOut_Mean.(gg{CItoDist}).(g{study_pop})(n,m) = 0;
                 
                 if isempty(temp) == 0 
-                    if length(temp) >= 2
+                    % if length(temp) >= 2
                         y = find(temp == 0);
                         if isempty(y) == 0 && CItoDist <= 2
                             temp(y) = [];
@@ -388,7 +388,7 @@ for study_pop = 1:length(g)
                         if length(temp) == floor(length(subjects)) % How many articulating CP in order to be included
                             DataOut_SPM.(gg{CItoDist}).(g{study_pop}){n,m} = {temp};
                         end
-                    end
+                    % end
                 end
             end
         end
